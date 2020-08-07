@@ -36,7 +36,7 @@ pipeline {
 		    	            }
 		    	            stage('Nexus uploader'){
 		    	                steps{
-		    	                    nexusArtifactUploader artifacts: [[artifactId: 'sparkjava-hello-world', classifier: '', file: 'target/sample.war', type: 'war']], credentialsId: 'nexuscred', groupId: 'sparkjava-hello-world', nexusUrl: '40.87.89.207:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-releases', version: "4.2.${BUILD_NUMBER}"
+		    	                    nexusArtifactUploader artifacts: [[artifactId: 'sparkjava-hello-world', classifier: '', file: 'target/sparkjava-hello-world-4.2.6.war', type: 'war']], credentialsId: 'nexuscred', groupId: 'sparkjava-hello-world', nexusUrl: '40.87.89.207:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-releases', version: "4.2.${BUILD_NUMBER}"
 		    	                }
 		    	            }
 		    	            
